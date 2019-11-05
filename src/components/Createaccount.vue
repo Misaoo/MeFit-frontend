@@ -1,14 +1,11 @@
 <template>
-  <div id="loginDiv">
-    
-    <form id="loginForm" v-on:submit="userLoggedIn">
+  <div id="createDiv">
+    <form id="createForm" v-on:submit="userLoggedIn">
         <input type="email" class="inputStyle" placeholder="Enter email"  v-model="email" id="email" required>
-        <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required >
-        <button type="submit" class="submitBtn">Login</button>
+        <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required  :maxlength="max" :minlength="min">
         <hr class="hrStyle">
         <button type="submit" class="submitBtn">Create a account</button>
     </form>
-
 
     <!-- <p v-bind:class="{ userLoggedIn }">
         Welcome {{this.email + this.password}}
@@ -21,7 +18,7 @@
 import axios from 'axios'
 
 export default {
-    name: "Login",
+    name: "Createaccount",
 
     data() {
         return {
@@ -59,16 +56,7 @@ export default {
                 }
             }).catch((e) => {
                 console.log('Exception: ', e)
-
-                /* if(results.email != email) {
-                    alert("Wrong email, try again")
-                }
-                else if(resluts.password != password) {
-                    alert("Wrong password, try again")
-                } */
-
             })
-
         }
     }
 
@@ -76,12 +64,9 @@ export default {
 </script>
 
 <style>
-    p {
-        color: #fff;
-        font-size: 20px;
-    }
+    
 
-    #loginDiv {
+    #createDiv {
         margin: 10%;
         margin-right: 37%;
         margin-left: 37%;

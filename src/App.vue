@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <login />
+    <Login />
+    <Createaccount />
   </div>
 </template>
 
 <script>
 
-import login from './components/login.vue'
+import Login from './components/Login.vue'
+import Createaccount from './components/Createaccount.vue'
 
 export default {
   name: 'app',
   components: {
-    
-    login
+    Login,
+    Createaccount
   }
 }
 </script>
