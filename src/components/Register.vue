@@ -1,15 +1,13 @@
 <template>
-  <div id="createDiv">
+  <div id="registerDiv">
     <form id="createForm" v-on:submit="userLoggedIn">
+        <input type="text" class="inputStyle" placeholder="Enter firstname"  v-model="firstname" id="firstname" required>
+        <input type="text" class="inputStyle" placeholder="Enter lastname"  v-model="lastname" id="lastname" required>
         <input type="email" class="inputStyle" placeholder="Enter email"  v-model="email" id="email" required>
         <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required  :maxlength="max" :minlength="min">
         <hr class="hrStyle">
         <button type="submit" class="submitBtn">Create a account</button>
     </form>
-
-    <!-- <p v-bind:class="{ userLoggedIn }">
-        Welcome {{this.email + this.password}}
-    </p> -->
   </div>
 </template>
 
@@ -18,10 +16,12 @@
 import axios from 'axios'
 
 export default {
-    name: "Createaccount",
+    name: "Register",
 
     data() {
         return {
+            firstname: "",
+            lastname: "",
             email: "",
             password: "",
             max: 20,
@@ -36,9 +36,11 @@ export default {
     methods: {
         userLoggedIn: function(event) {
             event.preventDefault();
-            console.log(this.email + this.password);
+            console.log(this.firstname + this.lastname + this.email + this.password);
 
             axios.post("Url here", {
+                firstname: this.firstname,
+                lastname: this.lastname,
                 email: this.email,
                 password: this.password
             })
@@ -66,7 +68,7 @@ export default {
 <style>
     
 
-    #createDiv {
+    #registerDiv {
         margin: 10%;
         margin-right: 37%;
         margin-left: 37%;

@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Login />
-    <Createaccount />
+     <!-- <Login /> -->
+    <Register />
   </div>
 </template>
 
 <script>
 
-import Login from './components/Login.vue'
-import Createaccount from './components/Createaccount.vue'
+ /* import Login from './components/Login.vue' */
+ import Register from './components/Register.vue'
 
 export default {
   name: 'app',
   components: {
-    Login,
-    Createaccount
+    /* Login, */
+    Register
   }
 }
 </script>
