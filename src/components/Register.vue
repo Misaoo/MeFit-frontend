@@ -1,5 +1,6 @@
 <template>
   <div id="registerDiv">
+
     <form id="createForm" v-on:submit="userLoggedIn">
         <input type="text" class="inputStyle" placeholder="Enter firstname"  v-model="firstname" id="firstname" required>
         <input type="text" class="inputStyle" placeholder="Enter lastname"  v-model="lastname" id="lastname" required>
@@ -8,11 +9,11 @@
         <hr class="hrStyle">
         <button type="submit" class="submitBtn">Create a account</button>
     </form>
+
   </div>
 </template>
 
 <script>
-
 import axios from 'axios'
 
 export default {
@@ -29,14 +30,31 @@ export default {
         }
     },
 
-    props: {
-        loggedIn: {}
-    },
-
+ 
     methods: {
         userLoggedIn: function(event) {
             event.preventDefault();
-            console.log(this.firstname + this.lastname + this.email + this.password);
+            /* console.log(this.firstname + this.lastname + this.email + this.password); */
+
+            /* Test if else where instead of a string it should check if the input matches the value from the database */
+            if(this.firstname != "jeppe") {
+                alert("Wrong firstname");
+            }
+            else if (this.lastname != "test") {
+                alert("Wrong lastname");
+            }
+            else if (this.email != "test@now.com") {
+                alert("Wrong email");
+            }
+            else if (this.password != "1234567") {
+                alert("Wrong password");
+            }
+            else {
+                alert("Logged in success");
+            }
+ 
+           
+    
 
             axios.post("Url here", {
                 firstname: this.firstname,
@@ -66,8 +84,6 @@ export default {
 </script>
 
 <style>
-    
-
     #registerDiv {
         margin: 10%;
         margin-right: 37%;
