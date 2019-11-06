@@ -1,29 +1,41 @@
 <template>
-  <div id="app">
-     <!-- <Login /> -->
-     <GoalDashBoard/>
-    <!-- <Register /> -->
-  </div>
+    <div id="app">
+        <Navbar />
+        <router-view />
+        <!-- <Footer/> -->
+    </div>
 </template>
 
 <script>
+     
+    import Navbar from './components/Navbar.vue'
+    /* import Footer from './components/Footer.vue'  */
+   
+    export default {
+      name: 'app',
+      components: {
+        Navbar
+        /* Footer */
+    },
 
- /* import Login from './components/Login.vue' */
- /* import Register from './components/Register.vue' */
- import GoalDashBoard from './components/GoalDashBoard.vue'
+    data() {
+        return {
+            
+        }
+    },
 
-export default {
-  name: 'app',
-  components: {
-    /* Login, */
-     /*  Register */
-    GoalDashBoard
-  }
+    methods: {
+       
+    } 
 }
 </script>
 
 <style>
-#app {
- 
+#app{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
+
 </style>

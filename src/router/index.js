@@ -1,36 +1,60 @@
 
-import Vue from 'vue';
+import Vue from 'vue'
 import Router from "vue-router"
-
-import Login from './components/Login.vue'
-import Register from './components/Register.vue'
-import GoalDashBoard from './components/GoalDashBoard.vue'
+import Login from '../components/Login'
+import Register from '../components/Register'
+import Progress from '../components/Progress'
+import GoalDashBoard from '../components/GoalDashBoard'
+import Workout from '../components/Workout'
+import Exercise from '../components/Exercise'
+import Profile from '../components/Profile'
+import CreateWorkout from '../components/CreateWorkout'
 
 Vue.use(Router)
 
 export default new Router({
 	routes: [
-	{
-		path: "/",
-		name: "Card",
-		component: Card
-	},
-	{
-		path: "/calender",
-		name: "Calender",
-		component: Calender,
-		beforeEnter: (to, from, next) => {
-			if(localStorage.accessToken == null) {
-				next()
-			} else {
-				next("/")
-			}
-		}
-	}
-	
-	/* {
-		path: "*",
-		redirect: "/"
-	} */
+		{
+			path: "/",
+			name: "Login",
+			component: Login
+		},
+		{
+			path: "/register",
+			name: "Register",
+			component: Register
+		},
+		{
+			path: "/progress",
+			name: "Progress",
+			component: Progress
+		},
+		{
+			path: "/goal",
+			name: "GoalDashBoard",
+			component: GoalDashBoard
+		},
+		{
+			path: "/workout",
+			name: "Workout",
+			component: Workout
+		},
+		{
+			path: "/exercise",
+			name: "Exercise",
+			component: Exercise
+		},
+		{
+			path: "/profile",
+			name: "Profile",
+			component: Profile
+		},
+		{
+			path: "/createworkout",
+			name: "CreateWorkout",
+			component: CreateWorkout
+		},
+		
+
 	]
 })

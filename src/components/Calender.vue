@@ -1,6 +1,8 @@
 <template>
   <div>
-      <h1>Calender component</h1>
+      <div id="calenderDiv">
+          <h1>Calender will show here</h1>
+      </div>
   </div>
 </template>
 
@@ -11,5 +13,5 @@ export default {
 </script>
 
 <style>
-
+    
 </style>

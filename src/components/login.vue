@@ -6,7 +6,11 @@
         <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required >
         <button type="submit" class="submitBtn">Login</button>
         <hr class="hrStyle">
-        <button type="submit" class="submitBtn">Create a account</button>
+
+        <router-link to="/register">
+            <button class="submitBtn">Create a account</button>
+        </router-link>
+        <!-- <button type="submit" class="submitBtn">Create a account</button> -->
     </form>
 
 
