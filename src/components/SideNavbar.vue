@@ -1,11 +1,20 @@
 <template>
   <div id="sideNavbarDiv">
-     <h1>Sidebar!!</h1>
 
-     <button class="sideNavBtns">1</button>
-     <button class="sideNavBtns">1</button>
-     <button class="sideNavBtns">1</button>
-     <button class="sideNavBtns">1</button>
+  <div id="imgContainer">
+    <img src="https://source.unsplash.com/random/300x300" class="img-fluid" id="sidebarIMG">
+  </div>
+  <h4 class="nameTitle">Name here</h4>
+
+  <hr class="hrStyle">
+
+  <router-link to="/">
+    <button class="sideNavBtns">test workouts</button>
+  </router-link>
+  <router-link to="/calender">
+    <button class="sideNavBtns"> test calender</button>
+  </router-link>
+  
   </div>
 </template>
 
@@ -23,12 +32,14 @@
       };
     },
     methods: {
-     
+      
     }
   }
 </script>
 
 <style>
+
+/* Desktop CSS */
     #sideNavbarDiv {
       height: 100%;
       width: 250px;
@@ -38,24 +49,101 @@
       left: 0;
       background-color: #111;
       overflow-x: hidden;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(70, 155, 172, 0.5);
     }
 
     .sideNavBtns {
-       width: 100%;
+      text-align: center;
+      background-color: transparent;
+        width: 100%;
         border: 0;
         margin-top: 8px;
         padding: 10px;
-        background: rgba(0, 0, 0, 0.4);
         color: #fff;
         font-size: 18px;
+        cursor: pointer;
     }
 
     .sideNavBtns:hover {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(70, 155, 172, 0.8);
     }
 
+    .hrStyle {
+        background-color: #000;
+        box-shadow: 1px 1px 1px #fff;
+        opacity: 0.2;
+    }
 
+    .nameTitle {
+      text-align: center;
+      color: #fff;
+    }
 
+    #imgContainer {
+      
+      margin-top: 10%;
+      margin-right: 20%;
+      margin-left: 20%;
+      margin-bottom: 3%;
+      /* background-color: green; */
+    }
+    #sidebarIMG {
+      border-radius: 50%;
+    }
+
+/* Mobile */
+@media (min-width: 360px) and (max-width: 600px) {
+    #sideNavbarDiv {
+      height: 100%;
+      width: auto;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      background: rgba(70, 155, 172, 0.5);
+    }
+
+    .sideNavBtns {
+      text-align: center;
+      background-color: transparent;
+        width: 100%;
+        border: 0;
+        margin-top: 8px;
+        padding: 10px;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .sideNavBtns:hover {
+      background: rgba(70, 155, 172, 0.8);
+    }
+    .hrStyle {
+        background-color: #000;
+        box-shadow: 1px 1px 1px #fff;
+        opacity: 0.2;
+    }
+    .nameTitle {
+      text-align: center;
+      color: #fff;
+    }
+
+    #imgContainer {
+      margin-top: 10%;
+      margin-right: 20%;
+      margin-left: 20%;
+      margin-bottom: 3%;
+      /* background-color: green; */
+    }
+    #sidebarIMG {
+      border-radius: 50%;
+    }
+} 
+    
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+} 
 
 </style>

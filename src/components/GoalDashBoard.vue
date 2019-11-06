@@ -1,7 +1,5 @@
 <template>
-
   <div>
-      <h1 id="dashboardTitle">Dashboard</h1>
 
     <div class="container">
         <div class="row">
@@ -10,47 +8,88 @@
             </div>
             <div class="col-12">
                 <div id="dashboardBody">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                    <h1 id="dashboardTitle">Dashboard</h1>
+                    <div id="progressDiv">
+                        <Progress />
+                    </div><br>
+
+                    <div class="wrapper">
+                        <div id="goalDiv">
+                            <div id="cardGrid">
+                                <Card />
+                                <Card />
+                                <Card />
+                            </div>
+                        </div>
+                        <div id="calenderDiv">
+                            <Calender />
+                        </div>
+                    </div>
+
                 </div>
-            </div>
         </div>
     </div>
 
   </div>
 
+</div>
 </template>
 
 <script>
 
 import SideNavbar from './SideNavbar'
 import Card from './Card'
+import Calender from './Calender'
+import Progress from './Progress'
 
 export default {
     name: 'GoalDashBoard',
     
     components: {
         SideNavbar,
-        Card
+        Card,
+        Calender,
+        Progress
     },
 }
 </script>
 
 <style>
 
+/* Desktop CSS */
+#dashboardBody {
+    margin-top: 5%;
+}
+
 #dashboardTitle {
     text-align: center;
     color: #fff;
 }
-
-#dashboardBody {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 20px; 
+#progressDiv {
+    background-color: green;
 }
+
+.wrapper { 
+    background-color: green;
+  overflow:hidden;
+}
+#goalDiv {
+  background-color: gray;
+  float:left; 
+}
+#calenderDiv { 
+  background-color: white;
+  overflow:hidden;
+}
+#cardGrid {
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px; 
+}
+
+
+
 
 </style>

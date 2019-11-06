@@ -16,7 +16,7 @@ export default {
   name: 'app',
   components: {
     /* Login, */
-    /*   Register */
+     /*  Register */
     GoalDashBoard
   }
 }

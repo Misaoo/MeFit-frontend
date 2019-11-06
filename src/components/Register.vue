@@ -1,9 +1,10 @@
 <template>
   <div id="registerDiv">
 
+    <!-- onkeypress="return /[a-å,ä,ö]/i.test(event.key)" this is a oneliner that makes the input only accepts alphabetic letters. -->
     <form id="createForm" v-on:submit="userLoggedIn">
-        <input type="text" class="inputStyle" placeholder="Enter firstname"  v-model="firstname" id="firstname" required>
-        <input type="text" class="inputStyle" placeholder="Enter lastname"  v-model="lastname" id="lastname" required>
+        <input type="text" class="inputStyle" placeholder="Enter firstname"  v-model="firstname" id="firstname" required  onkeypress="return /[a-å,ä,ö]/i.test(event.key)" :maxlength="max">
+        <input type="text" class="inputStyle" placeholder="Enter lastname"  v-model="lastname" id="lastname" required  onkeypress="return /[a-å,ä,ö]/i.test(event.key)">
         <input type="email" class="inputStyle" placeholder="Enter email"  v-model="email" id="email" required>
         <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required  :maxlength="max" :minlength="min">
         <hr class="hrStyle">
@@ -32,30 +33,10 @@ export default {
 
  
     methods: {
+
         userLoggedIn: function(event) {
             event.preventDefault();
-            /* console.log(this.firstname + this.lastname + this.email + this.password); */
-
-            /* Test if else where instead of a string it should check if the input matches the value from the database */
-            if(this.firstname != "jeppe") {
-                alert("Wrong firstname");
-            }
-            else if (this.lastname != "test") {
-                alert("Wrong lastname");
-            }
-            else if (this.email != "test@now.com") {
-                alert("Wrong email");
-            }
-            else if (this.password != "1234567") {
-                alert("Wrong password");
-            }
-            else {
-                alert("Logged in success");
-            }
- 
-           
-    
-
+            
             axios.post("Url here", {
                 firstname: this.firstname,
                 lastname: this.lastname,

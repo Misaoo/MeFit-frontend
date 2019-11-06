@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card">
-        <img src="#" class="card-img-top" alt="#">
+        <img src="https://source.unsplash.com/random/300x300" class="card-img-top" alt="#">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -19,7 +19,8 @@ export default {
 
 <style>
     .card {
+        width: 240px;
         margin: 10px;
-        background-color: rgba(0, 0, 0, 0.192);
+        background: rgba(70, 155, 172, 0.5);
     }
 </style>
