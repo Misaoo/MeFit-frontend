@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style>
+ /* Desktop */
     #registerDiv {
         margin: 10%;
         margin-right: 37%;
@@ -96,5 +97,15 @@ export default {
         box-shadow: 1px 1px 1px #fff;
         opacity: 0.2;
     }
+
+/* Mobile */
+@media (min-width: 360px) and (max-width: 600px) {
+
+} 
+    
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+} 
 
 </style>

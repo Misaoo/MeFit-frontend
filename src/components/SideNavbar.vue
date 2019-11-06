@@ -43,12 +43,12 @@
     #sideNavbarDiv {
       height: 100%;
       width: 300px;
-      /* position: fixed; */
-      top: 0px;
+      position: fixed;
+      top: auto;
       left: 0px;
-      /* z-index: 1; */
+      z-index: 1;
       overflow-x: hidden;
-      background: rgba(70, 155, 172, 0.5);
+      background: rgb(0, 94, 112);
     } 
 
     .sideNavBtns {
@@ -79,7 +79,6 @@
     }
 
     #imgContainer {
-      
       margin-top: 10%;
       margin-right: 20%;
       margin-left: 20%;
@@ -94,52 +93,6 @@
 /* Mobile */
 @media (min-width: 360px) and (max-width: 600px) {
 
-    #sideNavbarDiv {
-      height: 100%;
-      width: auto;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      background: rgba(70, 155, 172, 0.5);
-    }
-
-    .sideNavBtns {
-      text-align: center;
-      background-color: transparent;
-        width: 100%;
-        border: 0;
-        margin-top: 8px;
-        padding: 10px;
-        color: #fff;
-        font-size: 18px;
-        cursor: pointer;
-    }
-    .sideNavBtns:hover {
-      background: rgba(70, 155, 172, 0.8);
-    }
-    .hrStyle {
-        background-color: #000;
-        box-shadow: 1px 1px 1px #fff;
-        opacity: 0.2;
-    }
-    .nameTitle {
-      text-align: center;
-      color: #fff;
-    }
-
-    #imgContainer {
-      margin-top: 10%;
-      margin-right: 20%;
-      margin-left: 20%;
-      margin-bottom: 3%;
-      /* background-color: green; */
-    }
-    #sidebarIMG {
-      border-radius: 50%;
-    }
 } 
     
 /* Tablet */

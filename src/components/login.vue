@@ -80,6 +80,7 @@ export default {
 </script>
 
 <style>
+/* Desktop */
     p {
         color: #fff;
         font-size: 20px;
@@ -117,4 +118,13 @@ export default {
         opacity: 0.2;
     }
 
+/* Mobile */
+@media (min-width: 360px) and (max-width: 600px) {
+
+} 
+    
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+} 
 </style>
