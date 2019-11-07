@@ -1,5 +1,4 @@
 <template>
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <router-link class="navbar-brand" to="/">
            MeFit
@@ -57,7 +56,6 @@
                     </router-link>
                 </li>
 
-
                 <li class="nav-item">
                     <router-link class="nav-link" to="/" @click.native="logout">
                         <button class="navBtns">Logout</button>
@@ -81,8 +79,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-
 /* Desktop */
 .navbar {
     text-align: center;
@@ -112,5 +108,4 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   
 } 
-
 </style>

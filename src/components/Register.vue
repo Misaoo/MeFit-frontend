@@ -10,16 +10,13 @@
         <hr class="hrStyle">
         <button type="submit" class="submitBtn">Create a account</button>
     </form>
-
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
     name: "Register",
-
     data() {
         return {
             firstname: "",
@@ -31,9 +28,7 @@ export default {
         }
     },
 
- 
     methods: {
-
         userLoggedIn: function(event) {
             event.preventDefault();
             
@@ -60,7 +55,6 @@ export default {
             })
         }
     }
-
 }
 </script>
 
@@ -107,5 +101,4 @@ export default {
 @media (min-width: 768px) and (max-width: 1024px) {
     
 } 
-
 </style>
