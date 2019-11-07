@@ -21,12 +21,9 @@
 </template>
 
 <script>
-
 import axios from 'axios'
-
 export default {
     name: "Login",
-
     data() {
         return {
             email: "",
@@ -35,16 +32,13 @@ export default {
             min: 6
         }
     },
-
     props: {
         loggedIn: {}
     },
-
     methods: {
         userLoggedIn: function(event) {
             event.preventDefault();
             console.log(this.email + this.password);
-
             axios.post("Url here", {
                 email: this.email,
                 password: this.password
@@ -63,19 +57,15 @@ export default {
                 }
             }).catch((e) => {
                 console.log('Exception: ', e)
-
                 /* if(results.email != email) {
                     alert("Wrong email, try again")
                 }
                 else if(resluts.password != password) {
                     alert("Wrong password, try again")
                 } */
-
             })
-
         }
     }
-
 }
 </script>
 
@@ -85,7 +75,6 @@ export default {
         color: #fff;
         font-size: 20px;
     }
-
     #loginDiv {
         margin: 10%;
         margin-right: 37%;
@@ -94,14 +83,12 @@ export default {
         padding: 2%;
         background: rgba(0, 0, 0, 0.3);
     }
-
     .inputStyle {
         margin-top: 5px;
         margin-bottom: 5px;
         padding: 10px;
         width: 100%;
     }
-
     .submitBtn {
         width: 100%;
         border: 0;
@@ -111,16 +98,13 @@ export default {
         color: #fff;
         font-size: 18px;
     }
-
     .hrStyle {
         background-color: #000;
         box-shadow: 1px 1px 1px #fff;
         opacity: 0.2;
     }
-
 /* Mobile */
 @media (min-width: 360px) and (max-width: 600px) {
-
 } 
     
 /* Tablet */
