@@ -1,26 +1,34 @@
 <template>
-  <div id="registerDiv">
-
-    <!-- onkeypress="return /[a-å,ä,ö]/i.test(event.key)" this is a oneliner that makes the input only accepts alphabetic letters. -->
-    <form id="createForm" v-on:submit="userLoggedIn">
-        <input type="text" class="inputStyle" placeholder="Enter firstname"  v-model="firstname" id="firstname" required  onkeypress="return /[a-å,ä,ö]/i.test(event.key)" :maxlength="max">
-        <input type="text" class="inputStyle" placeholder="Enter lastname"  v-model="lastname" id="lastname" required  onkeypress="return /[a-å,ä,ö]/i.test(event.key)">
+  <div id="loginDiv">
+    
+    <form id="loginForm" v-on:submit="userLoggedIn">
         <input type="email" class="inputStyle" placeholder="Enter email"  v-model="email" id="email" required>
-        <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required  :maxlength="max" :minlength="min">
+        <input type="password" class="inputStyle" placeholder="Password"  v-model="password" id="password" required >
+        <button type="submit" class="submitBtn">Login</button>
         <hr class="hrStyle">
-        <button type="submit" class="submitBtn">Create a account</button>
+
+        <router-link to="/register">
+            <button class="submitBtn">Create a account</button>
+        </router-link>
+        <!-- <button type="submit" class="submitBtn">Create a account</button> -->
     </form>
+
+
+    <!-- <p v-bind:class="{ userLoggedIn }">
+        Welcome {{this.email + this.password}}
+    </p> -->
   </div>
 </template>
 
 <script>
+
 import axios from 'axios'
+
 export default {
-    name: "Register",
+    name: "Login",
+
     data() {
         return {
-            firstname: "",
-            lastname: "",
             email: "",
             password: "",
             max: 20,
@@ -28,13 +36,16 @@ export default {
         }
     },
 
+    props: {
+        loggedIn: {}
+    },
+
     methods: {
         userLoggedIn: function(event) {
             event.preventDefault();
-            
+            console.log(this.email + this.password);
+
             axios.post("Url here", {
-                firstname: this.firstname,
-                lastname: this.lastname,
                 email: this.email,
                 password: this.password
             })
@@ -52,15 +63,30 @@ export default {
                 }
             }).catch((e) => {
                 console.log('Exception: ', e)
+
+                /* if(results.email != email) {
+                    alert("Wrong email, try again")
+                }
+                else if(resluts.password != password) {
+                    alert("Wrong password, try again")
+                } */
+
             })
+
         }
     }
+
 }
 </script>
 
 <style>
- /* Desktop */
-    #registerDiv {
+/* Desktop */
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    #loginDiv {
         margin: 10%;
         margin-right: 37%;
         margin-left: 37%;
