@@ -41,6 +41,16 @@
                     </router-link>
                 </li>
                 <li class="nav-item" >
+                    <router-link class="nav-link" to="/createexercise">
+                        <button class="navBtns">Create new exercise</button>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
+                    <router-link class="nav-link" to="/showexercise">
+                        <button class="navBtns">Show exercise</button>
+                    </router-link>
+                </li>
+                <li class="nav-item" >
                     <router-link class="nav-link" to="/profile">
                         <button class="navBtns">Profile</button>
                     </router-link>

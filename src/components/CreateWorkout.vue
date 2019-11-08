@@ -121,6 +121,17 @@ data() {
 }
 </script>
 
+<style scooped>
+/* Desktop */
+#createWorkout {
+        margin: 10%;
+        margin-right: 37%;
+        margin-left: 37%;
+        margin-bottom: 5%;
+        padding: 2%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
 
 <style scoped>
 
