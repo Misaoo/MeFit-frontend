@@ -10,6 +10,7 @@ import Exercise from '../components/Exercise'
 import Profile from '../components/Profile'
 import CreateWorkout from '../components/CreateWorkout'
 import Calender from '../components/Calender'
+import CreateExercise from '../components/CreateExercise'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
 			path: "/exercise",
 			name: "Exercise",
 			component: Exercise
+		},
+		{
+			path: "/createexercise",
+			name: "CreateExercise",
+			component: CreateExercise
 		},
 		{
 			path: "/profile",
